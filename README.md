@@ -1,7 +1,10 @@
 ## **EEPROM Library V1.0** for Industruino D21G
 
-**Written by:** _Xabier Garmendia - EA2EGA_. 
-**In:** _Ingran Engineering S.L._.  
+**Written by:** _Xabier Garmendia - EA2EGA_. - _Ingran Engineering S.L._.  
+
+Based on the work of:
+David A. Mellis
+Christopher Andrews
 
 ### **What is the EEPROM library.**
 
