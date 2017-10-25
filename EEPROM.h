@@ -23,6 +23,7 @@
 #include <I2C_eeprom.h>
 
 #define EEPROM_SIZE 255
+#define E2END 1023
 
 I2C_eeprom eeprom_array[] = { I2C_eeprom(0x50, EEPROM_SIZE),I2C_eeprom(0x51, EEPROM_SIZE),I2C_eeprom(0x52, EEPROM_SIZE),I2C_eeprom(0x53, EEPROM_SIZE) };
 
@@ -123,12 +124,12 @@ struct EEPROMClass{
     void write( int idx, uint8_t val )   { (EERef( idx )) = val; }
     void update( int idx, uint8_t val )  { EERef( idx ).update( val ); }
     
-    /*
+    
     //STL and C++11 iteration capability.
-    EEPtr begin()                        { return 0x00; }
-    EEPtr end()                          { return length(); } //Standards requires this to be the item after the last valid entry. The returned pointer is invalid.
+    //EEPtr begin()                        { return 0x00; }
+    //EEPtr end()                          { return length(); } //Standards requires this to be the item after the last valid entry. The returned pointer is invalid.
     uint16_t length()                    { return E2END + 1; }
-    */
+    
     
     //Functionality to 'get' and 'put' objects to and from EEPROM.
     template< typename T > T &get( int idx, T &t ){

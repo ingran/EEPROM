@@ -1,10 +1,11 @@
-## **EEPROM Library V2.0** for Arduino
+## **EEPROM Library V1.0** for Industruino D21G
 
-**Written by:** _Christopher Andrews_.  
+**Written by:** _Xabier Garmendia - EA2EGA_. 
+**In:** _Ingran Engineering S.L._.  
 
 ### **What is the EEPROM library.**
 
-The EEPROM library provides an easy to use interface to interact with the internal non-volatile storage found in AVR based Arduino boards. This library will work on many AVR devices like ATtiny and ATmega chips.
+The EEPROM library provides an easy to use interface to interact with the internal non-volatile storage found in Indsutruino D21G based devices
 
 ### **How to use it**
 This library is included in your IDE download. To add its functionality to your sketch you'll need to reference the library header file. You do this by adding an include directive to the top of your sketch.
@@ -13,6 +14,8 @@ This library is included in your IDE download. To add its functionality to your 
 #include <EEPROM.h>
 
 void setup(){
+
+EEPROM.begin();
 
 }
 
