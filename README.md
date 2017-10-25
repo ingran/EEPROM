@@ -2,9 +2,7 @@
 
 **Written by:** _Xabier Garmendia - EA2EGA_. - _Ingran Engineering S.L._.  
 
-Based on the work of:
-David A. Mellis
-Christopher Andrews
+Based on the work of: David A. Mellis and Christopher Andrews
 
 ### **What is the EEPROM library.**
 
