@@ -21,7 +21,7 @@ void setup() {
   SerialUSB.println("================================");
   SerialUSB.println();
   
-  EEPROM.begin();
+  EEPROM.start();
 
   byte read_val;
   

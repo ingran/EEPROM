@@ -15,6 +15,9 @@
 
 void setup() {
 
+  EEPROM.start();
+  delay(100);
+  
   /***
     Iterate the EEPROM using a for loop.
   ***/

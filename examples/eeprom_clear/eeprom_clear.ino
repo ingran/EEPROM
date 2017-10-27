@@ -12,6 +12,9 @@
 
 void setup() {
 
+  EEPROM.start();
+  delay(100);
+  
   /***
     Iterate through each byte of the EEPROM storage.
 

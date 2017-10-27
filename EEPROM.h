@@ -126,8 +126,8 @@ struct EEPROMClass{
     
     
     //STL and C++11 iteration capability.
-    //EEPtr begin()                        { return 0x00; }
-    //EEPtr end()                          { return length(); } //Standards requires this to be the item after the last valid entry. The returned pointer is invalid.
+    EEPtr begin()                        { return 0x00; }
+    EEPtr end()                          { return length(); } //Standards requires this to be the item after the last valid entry. The returned pointer is invalid.
     uint16_t length()                    { return E2END + 1; }
     
     
@@ -146,7 +146,7 @@ struct EEPROMClass{
         return t;
     }
     
-    void begin(){
+    void start(){
     for (byte k=0;k<4;k++)
         eeprom_array[0].begin();
     }

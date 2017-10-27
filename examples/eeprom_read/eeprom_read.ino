@@ -13,6 +13,9 @@ int address = 0;
 byte value;
 
 void setup() {
+  EEPROM.start();
+  delay(100);
+  
   // initialize serial and wait for port to open:
   Serial.begin(9600);
   while (!Serial) {

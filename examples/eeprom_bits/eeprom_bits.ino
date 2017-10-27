@@ -16,6 +16,8 @@ void setup() {
   
   int address = 0; //Address to first EEPROM cell.
   
+  EEPROM.start();
+  
   delay( 2000 );  //Prevent touching the EEPROM through resets and uploading of sketch.
   Serial.begin( 9600 );
   

@@ -12,6 +12,9 @@
 
 void setup() {
 
+  EEPROM.start();
+  delay(100);
+
   //Start serial
   Serial.begin(9600);
   while (!Serial) {
