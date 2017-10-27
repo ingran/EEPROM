@@ -17,8 +17,8 @@ void setup() {
   delay(100);
   
   // initialize serial and wait for port to open:
-  Serial.begin(9600);
-  while (!Serial) {
+  SerialUSB.begin(9600);
+  while (!SerialUSB) {
     ; // wait for serial port to connect. Needed for Leonardo only
   }
 }
@@ -27,10 +27,10 @@ void loop() {
   // read a byte from the current address of the EEPROM
   value = EEPROM.read(address);
 
-  Serial.print(address);
-  Serial.print("\t");
-  Serial.print(value, DEC);
-  Serial.println();
+  SerialUSB.print(address);
+  SerialUSB.print("\t");
+  SerialUSB.print(value, DEC);
+  SerialUSB.println();
 
   /***
     Advance to the next address, when at the end restart at the beginning.
