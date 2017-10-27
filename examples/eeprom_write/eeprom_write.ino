@@ -12,10 +12,13 @@
 int addr = 0;
 
 void setup() {
-  /** Empty setup. **/
+  EEPROM.start();
+  delay(100);
 }
 
 void loop() {
+  
+  
   /***
     Need to divide by 4 because analog inputs range from
     0 to 1023 and each byte of the EEPROM can only hold a

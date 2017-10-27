@@ -24,8 +24,11 @@ struct MyObject {
 
 void setup() {
 
-  Serial.begin(9600);
-  while (!Serial) {
+  EEPROM.start();
+  delay(100);
+  
+  SerialUSB.begin(9600);
+  while (!SerialUSB) {
     ; // wait for serial port to connect. Needed for Leonardo only
   }
 
@@ -36,7 +39,7 @@ void setup() {
   //One simple call, with the address first and the object second.
   EEPROM.put(eeAddress, f);
 
-  Serial.println("Written float data type!");
+  SerialUSB.println("Written float data type!");
 
   /** Put is designed for use with custom structures also. **/
 
@@ -50,7 +53,7 @@ void setup() {
   eeAddress += sizeof(float); //Move address to the next byte after float 'f'.
 
   EEPROM.put(eeAddress, customVar);
-  Serial.print("Written custom data type! \n\nView the example sketch eeprom_get to see how you can retrieve the values!");
+  SerialUSB.print("Written custom data type! \n\nView the example sketch eeprom_get to see how you can retrieve the values!");
 }
 
 void loop() {

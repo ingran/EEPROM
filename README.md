@@ -16,7 +16,7 @@ This library is included in your IDE download. To add its functionality to your 
 
 void setup(){
 
-EEPROM.begin();
+EEPROM.start();
 
 }
 
@@ -31,6 +31,10 @@ The library provides a global variable named `EEPROM`, you use this variable to 
 You can view all the examples [here](examples/).
 
 ### **Library functions**
+
+#### **`EEPROM.start`**
+
+This function initializes the EEPROM access library. Must be called before other commands.
 
 #### **`EEPROM.read( address )`** [[_example_]](examples/eeprom_read/eeprom_read.ino)
 

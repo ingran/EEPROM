@@ -17,7 +17,8 @@
 int address = 0;
 
 void setup() {
-  /** EMpty setup **/
+  EEPROM.start();
+  delay(100);
 }
 
 void loop() {

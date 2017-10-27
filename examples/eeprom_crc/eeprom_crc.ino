@@ -12,20 +12,23 @@
 
 void setup() {
 
+  EEPROM.start();
+  delay(100);
+
   //Start serial
-  Serial.begin(9600);
-  while (!Serial) {
+  SerialUSB.begin(9600);
+  while (!SerialUSB) {
     ; // wait for serial port to connect. Needed for Leonardo only
   }
 
   //Print length of data to run CRC on.
-  Serial.print("EEPROM length: ");
-  Serial.println(EEPROM.length());
+  SerialUSB.print("EEPROM length: ");
+  SerialUSB.println(EEPROM.length());
 
   //Print the result of calling eeprom_crc()
-  Serial.print("CRC32 of EEPROM data: 0x");
-  Serial.println(eeprom_crc(), HEX);
-  Serial.print("\n\nDone!");
+  SerialUSB.print("CRC32 of EEPROM data: 0x");
+  SerialUSB.println(eeprom_crc(), HEX);
+  SerialUSB.print("\n\nDone!");
 }
 
 void loop() {
